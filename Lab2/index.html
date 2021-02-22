@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Shopping Central </title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="module" src="scripts/ProductController.js"></script>
+    </head>
+
+    <body>
+
+        <div class="top-banner">
+            <h1 class="heading"> Welcome to Shopping Central </h1>
+            <h3 class="description"> In here you can have a record and managment of your products. With this tool you can obtain the total price in real time.</h3>
+        </div>
+        
+        
+
+        <hr/>
+
+
+
+        <div class="section-container">
+            <h2 class="heading"> Add Product </h2>
+            <p class="description"> Please enter the product info. Make sure to insert valid info (The product name cannot be empty and the price should be a number)</p>
+
+            <form id="productForm">
+                <label for="productName"> Product Name: </label>
+                <input id="productName" type="text"/>
+
+                <label for="productPrice"> Product Price: </label>
+                <input id="productPrice" type="text"/>
+
+                <button id="addProduct" class="button-add"> Add product </button>
+            </form>
+
+            <p class="error" id="emptyName"> The product name should not be empty! </p>
+            <p class="error" id="repeatedName"> The product name already exist, try a different one. </p>
+            <p class="error" id="notNumber"> The product price should only contain integer numbers or decimal! </p>
+        </div>
+        
+
+
+        <hr/>
+
+
+
+        <div class="section-container" >
+            <h2 class="heading"> Recorded Products</h2>
+            <p class="description"> Here are your Products. To add more product you can use the previous section. </p>
+            <div align="center">
+                <ul id="productList"> </ul>
+            </div>
+        </div>
+
+
+
+        <hr/>
+
+
+
+        <div class="section-container" align="center" >
+            <h2 id="totalPrice"> Total Price: Nan pesos</h2>
+        </div>
+
+    </body>
+</html>
